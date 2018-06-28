@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 
         let i = 0;
-        JSON.parse(res).data.forEach(element => {
+        res.data.forEach((element, i) => {
             $.get('https://api.mixcloud.com' + element.key + 'embed-json/', function(res) {
 
                 app.programas.push({
@@ -19,13 +19,17 @@ $(document).ready(function() {
                     'html': JSON.parse(res).html
                 });
                 if (i == 20) {
-                    app.programas.sort((a, b) => a.i < b.i);
+                    console.log("---");
+                    app.programas.sort((a, b) => {
+                        return a.i - b.i
+                    });
                 }
             });
             i++;
         });
 
-    })
+
+    }, 'json');
 
 
 })
