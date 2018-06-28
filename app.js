@@ -12,7 +12,7 @@ $(document).ready(function() {
 
         let i = 0;
         JSON.parse(res).data.forEach(element => {
-            $.get('http://api.mixcloud.com' + element.key + 'embed-json/', function(res) {
+            $.get('https://api.mixcloud.com' + element.key + 'embed-json/', function(res) {
 
                 app.programas.push({
                     'i': i,
