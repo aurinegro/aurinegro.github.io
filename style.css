@@ -6,6 +6,10 @@ i {
     color: white;
 }
 
+.fill {
+    height: 100%;
+}
+
 .encabezado {
     background-image: url("res/img/back.jpg");
     height: 400px;
@@ -57,7 +61,7 @@ i {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 20px;
     background: rgba(0, 0, 0, 0.5);
     border: 3px solid white;
@@ -66,4 +70,8 @@ i {
 .imagen_programa {
     height: 100%;
     width: 100%;
+}
+
+.vistaPrograma {
+    background: grey;
 }

@@ -1,6 +1,8 @@
 var app = new Vue({
     el: '#app',
     data: {
+        mostrarPrograma: false,
+        vistaPrograma: null,
         programas: [{
                 key: "/radiopixel/",
                 name: "",
@@ -44,18 +46,26 @@ var app = new Vue({
                 picture: "",
             }
         ]
+    },
+    methods: {
+        mostrarPograma: function(programa) {
+            console.log(app.mostrarPrograma);
+            app.mostrarPrograma = true;
+            app.vistaPrograma = programa;
+            console.log(app.mostrarPrograma);
+        },
+        mostrarGrilla: function() {
+            app.mostrarPrograma = false;
+        }
     }
 })
 app.programas.forEach(function(programa, index) {
     $.get("https://api.mixcloud.com" + programa.key, function(res) {
         let json = JSON.parse(res);
-        console.log(json);
         let programa = app.programas[index];
         programa.name = json.name;
-        console.log(programa.name);
         programa.biog = json.biog;
         programa.picture = json.pictures.large;
-        console.log(programa);
     });
 });
 
