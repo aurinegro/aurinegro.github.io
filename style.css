@@ -1,77 +1,22 @@
-.barra {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-i {
+@import url('https://fonts.googleapis.com/css?family=Teko:700');
+body {
+    background-color: #252525;
     color: white;
 }
 
-.fill {
-    height: 100%;
+.margen {
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2%;
 }
 
-.encabezado {
-    background-image: url("res/img/back.jpg");
-    height: 400px;
-    position: relative;
+.contenedor {
+    background: repeating-linear-gradient(90deg, #131313, #131313 20px, #FFD600 20px, #FFD600 40px);
+    border: 4px solid #FFD600;
+    margin-top: 2%;
 }
 
-.texto_encabezado {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    bottom: 0;
-    color: white;
-    padding-right: 5%;
-    padding-top: 3%;
-}
-
-.escuchar_online {
-    padding: 4%;
-    color: white;
-    background: rgb(80, 80, 80);
-}
-
-.glifo_pausa {
-    color: white;
-}
-
-.glifo_play {
-    color: blue;
-}
-
-.logo_radio {
-    height: 40px;
-    margin-top: -25%;
-}
-
-.programas {
-    padding-top: 3%;
-    background: grey;
-}
-
-.contenedor_programa {
-    position: relative;
-    margin-bottom: 3%;
-}
-
-.texto_centrado_imagen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5rem;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border: 3px solid white;
-}
-
-.imagen_programa {
-    height: 100%;
-    width: 100%;
-}
-
-.vistaPrograma {
-    background: grey;
+.texto {
+    font-family: Teko, sans-serif;
 }
